@@ -1,0 +1,18 @@
+.btn {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9b2ae+0,f9b2ae+0,c95871+55,ea98aa+100,a8001c+100 */
+background: #f9b2ae; /* Old browsers */
+background: -moz-linear-gradient(top, #f9b2ae 0%, #f9b2ae 0%, #c95871 55%, #ea98aa 100%, #a8001c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f9b2ae 0%,#f9b2ae 0%,#c95871 55%,#ea98aa 100%,#a8001c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f9b2ae 0%,#f9b2ae 0%,#c95871 55%,#ea98aa 100%,#a8001c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b2ae', endColorstr='#a8001c',GradientType=0 ); /* IE6-9 */
+padding: 10px;
+color: #fff;
+margin-top: 5px;
+}
+
+input.btn:disabled {
+    background: #cccccc;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}

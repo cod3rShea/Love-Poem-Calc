@@ -1,0 +1,172 @@
+html {
+  font-family: 'Love Ya Like A Sister', cursive;
+  background-color: #000;
+}
+
+
+
+
+body {
+  box-sizing: border-box;
+  background-image: url("assets/images/blackhearts.jpeg");
+  background-repeat: no-repeat;
+  background-position: 0px 4px;
+  background-size: cover;
+  width: 100%;
+  
+
+}
+
+
+
+h1 {
+  font-size: 52px;
+  font-family: 'Love Ya Like A Sister', cursive;
+  margin: 0;
+  background: -webkit-linear-gradient(#fefcfd, #da7586);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 450px) {
+      font-size: 25px;
+    }
+}
+
+h2 {
+  color: #fff;
+  font-family: 'Love Ya Like A Sister', cursive;
+  margin-bottom: 0;
+  background: -webkit-linear-gradient(#fefcfd, #da7586);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background: #00000099;
+}
+
+.left {
+  width: 30%;
+  padding: 4px;
+  border: 5px;
+  margin: 2%;
+  border-radius: 20px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+}
+
+.name {
+  border: none;
+  color: black;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+img {
+  display: block;
+  height: 80%;
+  width: 80%;
+  border: solid 2px;
+  margin: 6px auto;
+}
+
+.right {
+  float: right;
+  width: 60%;
+  padding: 2px;
+  margin: 2%;
+  border: 5px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+
+
+p {
+  font-size: 18px;
+}
+
+::placeholder {
+  color: rgb(85, 85, 85);
+}
+
+
+i.far.fa-heart {
+  color: red;
+  font-size: 22px;
+  margin: 0 20px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+ img {
+    width: 100%;
+  }
+  
+
+    /* grid */
+    @media screen and (max-width: 1220px) {
+        .container {
+          padding: 0 20px;
+        }
+      }
+      
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+      }
+      
+      .col-1-3 {
+        width: 33.33%;
+        width: calc(100% / 3);
+      }
+      
+      .col-4 {
+        width: 40%;
+        width: calc(40% - 30px);
+      }
+      
+      .col-5 {
+        width: 50%;
+      }
+      
+      .col-6 {
+        width: 60%;
+        width: calc(60% - 30px);
+      }
+      
+      .col-10 {
+        width: 100%;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .col-1-3, .col-4, .col-5, .col-6 {
+          width: 100%;
+        }
+      }

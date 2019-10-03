@@ -1,0 +1,10 @@
+footer {
+    border: 1px solid $border-dark;
+    .my-fotter {
+        border: 1px solid $border-dark;
+    }
+}
+
+footer {
+    @include reset-list;
+}
