@@ -44,6 +44,7 @@ function poemLines(loveName) {
 		"async": true,
 		"crossDomain": true,
 		"url": poemURL,
+		dataType: 'jsonp',
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623",
