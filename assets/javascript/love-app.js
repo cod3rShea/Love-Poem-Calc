@@ -22,7 +22,6 @@ function loveName() {
 		"url": calcQueryURL,
 		"method": "GET",
 		"headers": {
-			"Access-Control-Allow-Origin": "*",
 			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623",
 			"x-rapidapi-host": "love-calculator.p.rapidapi.com"
 		}
@@ -48,7 +47,6 @@ function poemLines(loveName) {
 		"method": "GET",
 		 "dataType":'jsonp',
 		"headers": {
-			"Access-Control-Allow-Origin": "*",
 			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623",
 			"x-rapidapi-host": "thundercomb-poetry-db-v1.p.rapidapi.com"
 		}
@@ -56,6 +54,7 @@ function poemLines(loveName) {
 
 	// The responses we get sometimes have the wrong linecount, so we loop though to check the linecount, and put correct ones in their own array.
 	$.ajax(settings).done(function (response) {
+		console.log(response);
 		for (var i = 0; i < response.length; i++) {
 			if (response[i].linecount === percentage) {
 				poemArray.push(response[i])
