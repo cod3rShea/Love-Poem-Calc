@@ -1,15 +1,15 @@
 // Declare global variables
-var firstName = "";
-var secondName = "";
-var percentage = "";
-var calcQueryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
-var settings = "";
-var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
-var poemArray = [];
-var poemToDisplay = [];
+let firstName = "";
+let secondName = "";
+let percentage = "";
+let calcQueryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
+let settings = "";
+let poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
+let poemArray = [];
+let poemToDisplay = [];
 
 // This function grabs the values from the name inputs and assigns them to variables, which are inserted into the query URL.
-function loveName() {
+const loveName = () => {
 	reset();
 	firstName = $("#f-name").val().trim();
 	secondName = $("#l-name").val().trim();
@@ -38,23 +38,23 @@ function loveName() {
 // Here we put the percentage you were given into the poem API query URL to return a poem with the same linecount.
 function poemLines(loveName) {
 
-	var poemURL = "https://poetrydb.org/linecount/" + percentage;
+	let poemURL = "https://poetrydb.org/linecount/" + percentage;
 	
 	jQuery.get( `${poemURL}`, (data) => {
-		for (var i = 0; i < data.length; i++) {
+		for (let i = 0; i < data.length; i++) {
 			if (data[i].linecount === percentage) {
 				poemArray.push(data[i])
 			}
 		}
 
 		// We then generate a random number to pull a random poem so you're not given the same poem if you hit "go" again.
-		var number = Math.floor(Math.random() * poemArray.length);
-		var poemToDisplay = poemArray[number].lines;
+		let number = Math.floor(Math.random() * poemArray.length);
+		let poemToDisplay = poemArray[number].lines;
 		$(".loader").remove();
 
 		// After we choose a poem, we loop through to display the poem on the page.
 		for (i = 0; i < poemToDisplay.length; i++) {
-			var poemDiv = $("<p>").text(poemToDisplay[i]);
+			let poemDiv = $("<p>").text(poemToDisplay[i]);
 			$("#poem").append(poemDiv);
 		}
 
@@ -68,7 +68,7 @@ function poemLines(loveName) {
 
 // This blanks out both text fields, the percentage variable, and the array of correct linecount poems.
 // Clearing the names and percentage is mostly for convenience, but the array would stack with the old poems if not cleared.
-function reset() {
+const reset = () => {
 	firstName = "";
 	secondName = "";
 	percentage = "";
@@ -104,7 +104,7 @@ $(document).ready(function () {
 });
 
 // Typed.js functionality. We give it what to type out as well as a speed and some parameters for backspace and looping.
-var typed = new Typed('h1', {
+let typed = new Typed('h1', {
 	strings: ["LOVE CALCULATOR ^1000 AND ^1000 POEM GENERATOR"],
 	typeSpeed: 100,
 	backSpeed: 100,
