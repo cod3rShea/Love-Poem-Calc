@@ -39,25 +39,12 @@ function loveName() {
 function poemLines(loveName) {
 
 	var poemURL = "https://poetrydb.org/linecount/" + percentage;
-
-// 	settings = {
-// 		"async": true,
-// 		"crossDomain": true,
-// 		"url": poemURL,
-// 		"method": "GET",
-// 		 "dataType":'jsonp',
-// 		"headers": {
-// 			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623",
-// 			"x-rapidapi-host": "thundercomb-poetry-db-v1.p.rapidapi.com"
-// 		}
-// 	}
 	
 	jQuery.get( `${poemURL}`, (data) => {
-	console.log(data);
-	// The responses we get sometimes have the wrong linecount, so we loop though to check the linecount, and put correct ones in their own array.
-// 	$.ajax(settings).done(function (response) {
-		console.log(response);
+		console.log(data);
+		// The responses we get sometimes have the wrong linecount, so we loop though to check the linecount, and put correct ones in their own array.
 		for (var i = 0; i < data.length; i++) {
+			console.log(data[i]);
 			if (data[i].linecount === percentage) {
 				poemArray.push(data[i])
 			}
@@ -77,11 +64,9 @@ function poemLines(loveName) {
 		// This displays the author and title
 		$("#title").text(poemArray[number].title);
 		$("#author").text("Author : " + poemArray[number].author);
-// 	});
 	}).fail(function() {
 		throw Error( "error" );
 	});
-
 }
 
 // This blanks out both text fields, the percentage variable, and the array of correct linecount poems.
