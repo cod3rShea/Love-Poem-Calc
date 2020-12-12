@@ -21,6 +21,8 @@ function loveName() {
 		"crossDomain": true,
 		"url": calcQueryURL,
 		"method": "GET",
+		data: {},
+		dataType: 'jsonp',
 		"headers": {
 			"x-rapidapi-host": "love-calculator.p.rapidapi.com",
 			"x-rapidapi-key": "57f0a93f82msh11e9e8d0340f0b5p1eb386jsn6513d6683f3e"
