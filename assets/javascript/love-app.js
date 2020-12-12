@@ -39,7 +39,7 @@ function loveName() {
 // Here we put the percentage you were given into the poem API query URL to return a poem with the same linecount.
 function poemLines(loveName) {
 
-	var poemURL = "https://poetrydb.org/linecount/" + percentage;
+	var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
 
 	settings = {
 		"async": true,
