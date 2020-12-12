@@ -57,9 +57,9 @@ function poemLines(loveName) {
 	// The responses we get sometimes have the wrong linecount, so we loop though to check the linecount, and put correct ones in their own array.
 // 	$.ajax(settings).done(function (response) {
 		console.log(response);
-		for (var i = 0; i < response.length; i++) {
-			if (response[i].linecount === percentage) {
-				poemArray.push(response[i])
+		for (var i = 0; i < data.length; i++) {
+			if (data[i].linecount === percentage) {
+				poemArray.push(data[i])
 			}
 		}
 
