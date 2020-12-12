@@ -25,7 +25,7 @@ function loveName() {
 		dataType: 'jsonp',
 		"headers": {
 			"x-rapidapi-host": "love-calculator.p.rapidapi.com",
-			"x-rapidapi-key": "57f0a93f82msh11e9e8d0340f0b5p1eb386jsn6513d6683f3e"
+			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623"
 		}
 	}
 
