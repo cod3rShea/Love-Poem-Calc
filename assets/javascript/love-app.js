@@ -41,10 +41,7 @@ function poemLines(loveName) {
 	var poemURL = "https://poetrydb.org/linecount/" + percentage;
 	
 	jQuery.get( `${poemURL}`, (data) => {
-		console.log(data);
-		// The responses we get sometimes have the wrong linecount, so we loop though to check the linecount, and put correct ones in their own array.
 		for (var i = 0; i < data.length; i++) {
-			console.log(data[i]);
 			if (data[i].linecount === percentage) {
 				poemArray.push(data[i])
 			}
