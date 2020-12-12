@@ -45,9 +45,7 @@ function poemLines(loveName) {
 		"crossDomain": true,
 		"url": poemURL,
 		"method": "GET",
-		"dataType": "json",
 		"headers": {
-			"x-requested-with": "xhr",
 			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623",
 			"x-rapidapi-host": "thundercomb-poetry-db-v1.p.rapidapi.com"
 		}
