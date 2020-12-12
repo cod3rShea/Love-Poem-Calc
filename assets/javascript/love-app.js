@@ -53,7 +53,7 @@ function poemLines(loveName) {
 // 	}
 	
 	jQuery.get( `${poemURL}`, (data) => {
-
+	console.log(data);
 	// The responses we get sometimes have the wrong linecount, so we loop though to check the linecount, and put correct ones in their own array.
 // 	$.ajax(settings).done(function (response) {
 		console.log(response);
