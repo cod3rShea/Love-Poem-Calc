@@ -16,7 +16,7 @@ function loveName() {
 
 	// It makes a GET request to get your "compatibility percentage" which is displayed on screen.
 	calcQueryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
-	settings = {
+	const settings = {
 		"async": true,
 		"crossDomain": true,
 		"url": calcQueryURL,
@@ -25,7 +25,7 @@ function loveName() {
 			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623",
 			"x-rapidapi-host": "love-calculator.p.rapidapi.com"
 		}
-	}
+	};
 
 	// We then call the functions to display the poem.
 	$.ajax(settings).done(function (response) {
